@@ -1,20 +1,19 @@
-<!doctype html><html lang="en"><head>
-  <title>nxlab.ai — Practical AI partner for companies</title>
-  <meta name="description" content="Pomáháme firmám využít AI s rozumem — od nápadu po implementaci. Bez hype, s důrazem na bezpečnost, důvěru a měřitelný přínos.">
+<!doctype html>
+<html lang="en">
+<head>
+  <title>NXLab.ai — Partner for meaningful AI adoption</title>
+  <meta name="description" content="We help companies use AI wisely — from idea to implementation. Without hype, with a focus on security, trust and measurable value.">
   <link rel="canonical" href="https://nxlab.ai/en/">
   <link rel="alternate" hreflang="cs" href="https://nxlab.ai/">
-  <link rel="alternate" hreflang="cs" href="https://nxlab.ai/en/">
+  <link rel="alternate" hreflang="en" href="https://nxlab.ai/en/">
 
   <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="alternate icon" type="image/png" href="/favicon.png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <meta name="theme-color" content="#3b82f6">
-  <meta name="google-site-verification" content="uNaiPwfM7RikBORzVRVhXYO3bZKcSi1xgKTt8BAIGy8">
-  <meta name="msvalidate.01" content="6275B635CA12AAF68A4B833702931556">
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-2L5NXT75WG"></script>
-  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-2L5NXT75WG');</script>
   <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <style>
     html{scroll-behavior:smooth}
     .container{max-width:1200px}
@@ -27,117 +26,180 @@
     p{line-height:1.4;margin-bottom:1.1rem}
   </style>
 </head>
-<body class="bg-white text-slate-900 antialiased">
-<header class="sticky top-0 z-40 w-full bg-white/95 backdrop-blur border-b border-slate-200"><div class="container mx-auto px-4 lg:px-6 h-16 flex items-center justify-between">
-  <a href="/" class="flex items-baseline gap-1 font-extrabold tracking-tight text-[22px]"><span class="text-slate-900">nxlab</span><span class="text-blue-500">.</span><span class="text-blue-500">ai</span></a>
-  <nav class="hidden md:flex items-center gap-6 text-[14px] text-slate-700">
-    <a href="#what" class="hover:text-slate-900">What we do</a>
-    <a href="#how" class="hover:text-slate-900">How we work</a>
-    <a href="#why" class="hover:text-slate-900">Why us</a>
-    <a href="/careers/" class="hover:text-slate-900 font-medium">Join us</a>
-    <a href="#contact" class="rounded-md btn-gradient text-white px-4 py-2">Contact</a>
-    <a href="/" class="text-slate-600 hover:text-slate-900" hreflang="cs" aria-label="English version">CZ</a>
-  </nav></div></header>
+<body class="bg-white text-slate-900 antialiased font-[Inter]">
 
-<section class="relative"><div class="hero-bg"></div><div class="hero-overlay"></div><div class="hero-anim"></div>
-  <div class="relative z-10 container mx-auto px-4 lg:px-6 py-12 lg:py-16 flex flex-col items-start justify-center min-h-[52vh]">
-    <div class="max-w-3xl text-white">
-      <h1 class="text-4xl lg:text-5xl font-extrabold leading-tight">We help companies use AI sensibly.</h1>
-      <p class="mt-3 text-lg text-slate-200">We identify specific places where AI saves time and improves quality. No jargon — with respect for your brand and data.</p>
-      <div class="mt-4 flex flex-wrap gap-3"><a href="#contact" class="rounded-md btn-gradient text-white px-5 py-3 font-medium">Book an intro call</a></div>
-      <p class="mt-3 text-sm text-slate-300">NDA by default • Your data stays yours • On‑prem possible</p>
+  <!-- HEADER -->
+  <header class="sticky top-0 z-40 w-full bg-white/95 backdrop-blur border-b border-slate-200">
+    <div class="container mx-auto px-4 lg:px-6 h-16 flex items-center justify-between">
+      <a href="/en/" class="flex items-baseline gap-1 font-extrabold tracking-tight text-[22px]">
+        <span class="text-slate-900">nxlab</span><span class="text-blue-500">.</span><span class="text-blue-500">ai</span>
+      </a>
+
+      <!-- DESKTOP MENU -->
+      <nav class="hidden md:flex items-center gap-6 text-[14px] text-slate-700">
+        <a href="#what" class="hover:text-slate-900">What we do</a>
+        <a href="#how" class="hover:text-slate-900">How we work</a>
+        <a href="#why" class="hover:text-slate-900">Why us</a>
+        <a href="/careers/" class="hover:text-slate-900 font-medium">Careers</a>
+        <a href="#contact" class="rounded-md btn-gradient text-white px-4 py-2">Contact</a>
+        <a href="/" class="text-slate-600 hover:text-slate-900" hreflang="cs" aria-label="Czech version">CZ</a>
+      </nav>
+
+      <!-- MOBILE MENU BUTTON -->
+      <button id="menu-toggle"
+              class="md:hidden flex flex-col justify-center w-8 h-8 relative focus:outline-none group"
+              aria-label="Toggle menu">
+        <span class="bar absolute w-6 h-[2px] bg-slate-800 rounded transition-all duration-300 origin-center"></span>
+        <span class="bar absolute w-6 h-[2px] bg-slate-800 rounded transition-all duration-300 origin-center translate-y-[8px]"></span>
+        <span class="bar absolute w-6 h-[2px] bg-slate-800 rounded transition-all duration-300 origin-center -translate-y-[8px]"></span>
+      </button>
     </div>
-  </div>
-</section>
 
-<main>
-  <section id="what" class="bg-white">
-    <div class="container mx-auto px-4 lg:px-6 py-14 lg:py-18">
-      <h2 class="text-2xl lg:text-3xl font-bold text-slate-900">What we do</h2>
-      <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div class="max-w-[34ch]"><h3 class="text-[17px] font-semibold">We turn documents into briefs</h3><p class="mt-0 text-slate-600">Summaries and recommendations from manuals, contracts and materials.</p></div>
-        <div class="max-w-[34ch]"><h3 class="text-[17px] font-semibold">We turn meetings into actions</h3><p class="mt-0 text-slate-600">Transcript, summary and action items to email or your CRM.</p></div>
-        <div class="max-w-[34ch]"><h3 class="text-[17px] font-semibold">We turn processes into automation</h3><p class="mt-0 text-slate-600">Integrations with your tools; less manual work.</p></div>
-        <div class="max-w-[34ch]"><h3 class="text-[17px] font-semibold">We turn knowledge base into answers</h3><p class="mt-0 text-slate-600">Clear answers with source links — internal or customer‑facing.</p></div>
+    <!-- MOBILE MENU -->
+    <div id="mobile-menu"
+      class="md:hidden hidden flex-col bg-white/98 backdrop-blur border-t border-slate-200 shadow-lg text-[16px] text-slate-800 opacity-0 -translate-y-3 transition-all duration-300 rounded-b-2xl">
+
+      <a href="#what" class="block px-6 py-3 border-b border-slate-100 hover:bg-slate-50 transition-colors">What we do</a>
+      <a href="#how" class="block px-6 py-3 border-b border-slate-100 hover:bg-slate-50 transition-colors">How we work</a>
+      <a href="#why" class="block px-6 py-3 border-b border-slate-100 hover:bg-slate-50 transition-colors">Why us</a>
+      <a href="/careers/" class="block px-6 py-3 border-b border-slate-100 font-medium hover:bg-slate-50 transition-colors">Careers</a>
+
+      <div class="px-6 py-4">
+        <a href="#contact" class="block text-center text-white bg-gradient-to-r from-indigo-500 to-blue-500 rounded-md py-2 font-medium shadow hover:opacity-95 transition-all">
+          Contact
+        </a>
+      </div>
+
+      <a href="/" class="block px-6 py-3 text-slate-600 hover:bg-slate-50" hreflang="cs">CZ</a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="relative">
+    <div class="hero-bg"></div><div class="hero-overlay"></div><div class="hero-anim"></div>
+    <div class="relative z-10 container mx-auto px-4 lg:px-6 py-12 lg:py-16 flex flex-col items-start justify-center min-h-[52vh]">
+      <div class="max-w-3xl text-white">
+        <h1 class="text-4xl lg:text-5xl font-extrabold leading-tight">We help companies use AI wisely.</h1>
+        <p class="mt-3 text-lg text-slate-200">We identify where AI saves time and improves quality. No jargon — just practical, secure, brand-respecting solutions.</p>
+        <div class="mt-4 flex flex-wrap gap-3"><a href="#contact" class="rounded-md btn-gradient text-white px-5 py-3 font-medium">Book an intro call</a></div>
+        <p class="mt-3 text-sm text-slate-300">NDA guaranteed • Your data stays yours • On-prem possible</p>
       </div>
     </div>
   </section>
 
-  <section id="how" class="bg-slate-50">
-    <div class="container mx-auto px-4 lg:px-6 py-14 lg:py-18">
-      <h2 class="text-2xl lg:text-3xl font-bold text-slate-900">How we work</h2>
-      <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div class="max-w-[34ch]"><p class="text-[12px] uppercase tracking-wider text-slate-500">Step 1</p><p class="mt-2 font-semibold">Consultation</p><p class="mt-0 text-slate-600">We learn your context, goals and current pain points.</p></div>
-        <div class="max-w-[34ch]"><p class="text-[12px] uppercase tracking-wider text-slate-500">Step 2</p><p class="mt-2 font-semibold">Design & mini‑prototype</p><p class="mt-0 text-slate-600">We propose the approach and show it on a sample.</p></div>
-        <div class="max-w-[34ch]"><p class="text-[12px] uppercase tracking-wider text-slate-500">Step 3</p><p class="mt-2 font-semibold">Implementation</p><p class="mt-0 text-slate-600">We deploy, integrate with your tools and train the team.</p></div>
+  <!-- MAIN SECTIONS -->
+  <main>
+    <section id="what" class="bg-white">
+      <div class="container mx-auto px-4 lg:px-6 py-14 lg:py-18">
+        <h2 class="text-2xl lg:text-3xl font-bold text-slate-900">What we do</h2>
+        <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="max-w-[34ch]"><h3 class="text-[17px] font-semibold">We turn documents into summaries</h3><p class="mt-0 text-slate-600">Actionable insights from manuals, contracts, and research.</p></div>
+          <div class="max-w-[34ch]"><h3 class="text-[17px] font-semibold">We turn meetings into tasks</h3><p class="mt-0 text-slate-600">Transcripts, summaries, and to-dos — straight to email or CRM.</p></div>
+          <div class="max-w-[34ch]"><h3 class="text-[17px] font-semibold">We turn processes into automations</h3><p class="mt-0 text-slate-600">Integrations with your tools to reduce manual work.</p></div>
+          <div class="max-w-[34ch]"><h3 class="text-[17px] font-semibold">We turn knowledge bases into answers</h3><p class="mt-0 text-slate-600">Clear answers with source links — internally or for customers.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="how" class="bg-slate-50">
+      <div class="container mx-auto px-4 lg:px-6 py-14 lg:py-18">
+        <h2 class="text-2xl lg:text-3xl font-bold text-slate-900">How we work</h2>
+        <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="max-w-[34ch]"><p class="text-[12px] uppercase tracking-wider text-slate-500">Step 1</p><p class="mt-2 font-semibold">Consultation</p><p class="mt-0 text-slate-600">We learn about your context, goals, and current challenges.</p></div>
+          <div class="max-w-[34ch]"><p class="text-[12px] uppercase tracking-wider text-slate-500">Step 2</p><p class="mt-2 font-semibold">Proposal & mini-prototype</p><p class="mt-0 text-slate-600">We outline the approach and show a quick demo.</p></div>
+          <div class="max-w-[34ch]"><p class="text-[12px] uppercase tracking-wider text-slate-500">Step 3</p><p class="mt-2 font-semibold">Implementation</p><p class="mt-0 text-slate-600">We build, integrate, and train your team.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="why" class="bg-white">
+      <div class="container mx-auto px-4 lg:px-6 py-14 lg:py-18">
+        <h2 class="text-2xl lg:text-3xl font-bold text-slate-900">Why us</h2>
+        <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="max-w-[34ch]"><p class="font-semibold">Human-first, brand-aware</p><p class="mt-0 text-slate-600">Clear communication, refined outputs, great UX.</p></div>
+          <div class="max-w-[34ch]"><p class="font-semibold">Trust and confidentiality</p><p class="mt-0 text-slate-600">NDA, auditability, and access control built-in.</p></div>
+          <div class="max-w-[34ch]"><p class="font-semibold">From idea to delivery</p><p class="mt-0 text-slate-600">We don’t just propose — we build and deploy.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="bg-slate-50">
+      <div class="container mx-auto px-4 lg:px-6 py-14 lg:py-18">
+        <h2 class="text-2xl lg:text-3xl font-bold">Contact</h2>
+        <div class="max-w-2xl">
+          <p class="mt-2 text-slate-600">Write a few sentences about your goal and let’s schedule a short call.</p>
+          <form name="contact-en" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thanks" class="mt-6 grid grid-cols-1 gap-4">
+            <input type="hidden" name="form-name" value="contact-en">
+            <p class="hidden"><label>Leave this empty: <input name="bot-field"></label></p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <input class="rounded-md bg-white border border-slate-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-violet-600" name="name" placeholder="Name" required>
+              <input class="rounded-md bg-white border border-slate-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-violet-600" name="email" placeholder="Email" type="email" required>
+            </div>
+            <input class="rounded-md bg-white border border-slate-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-violet-600" name="company" placeholder="Company (optional)">
+            <textarea class="rounded-md bg-white border border-slate-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-violet-600" name="message" placeholder="How can we help?" rows="4" required></textarea>
+            <div data-netlify-recaptcha="true"></div>
+            <button class="rounded-md btn-gradient text-white px-5 py-3 font-medium w-max">Send</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-[#0b1120] border-t border-slate-800 text-slate-300">
+    <div class="container mx-auto px-4 lg:px-6 py-10 text-sm">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div><p class="font-semibold text-white">nxlab.ai</p><p class="mt-2 text-slate-400">AI partner for medium and large businesses.</p></div>
+        <div><p class="font-semibold text-white">Navigation</p>
+          <ul class="mt-2 space-y-1">
+            <li><a href="#what" class="hover:text-white">What we do</a></li>
+            <li><a href="#how" class="hover:text-white">How we work</a></li>
+            <li><a href="#why" class="hover:text-white">Why us</a></li>
+            <li><a href="#contact" class="hover:text-white">Contact</a></li>
+          </ul>
+        </div>
+        <div><p class="font-semibold text-white">Legal</p>
+          <ul class="mt-2 space-y-1">
+            <li><a href="#" class="hover:text-white">Privacy Policy</a></li>
+            <li><a href="#" class="hover:text-white">Terms of Use</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="mt-6 border-t border-slate-800 pt-5 flex items-center justify-between">
+        <p>© 2025 nxlab.ai</p><p class="text-slate-500">EU hosting • NDA • On-prem on request</p>
       </div>
     </div>
-  </section>
+  </footer>
 
-  <section id="why" class="bg-white">
-    <div class="container mx-auto px-4 lg:px-6 py-14 lg:py-18">
-      <h2 class="text-2xl lg:text-3xl font-bold text-slate-900">Why us</h2>
-      <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div class="max-w-[34ch]"><p class="font-semibold">Human and brand-respectful</p><p class="mt-0 text-slate-600">Clear language, clean outputs, and focus on user experience.</p></div>
-        <div class="max-w-[34ch]"><p class="font-semibold">Trust and discretion</p><p class="mt-0 text-slate-600">NDA, auditability, and access only for authorized people.</p></div>
-        <div class="max-w-[34ch]"><p class="font-semibold">From design to delivery</p><p class="mt-0 text-slate-600">What we design, we also build and help deploy.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <section id="contact" class="bg-slate-50">
-    <div class="container mx-auto px-4 lg:px-6 py-14 lg:py-18">
-      <h2 class="text-2xl lg:text-3xl font-bold">Contact</h2>
-      <div class="max-w-2xl">
-        <p class="mt-2 text-slate-600">Write a few sentences about your goal and let's schedule a short call.</p>
-        <form name="contact-en" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/en/thanks" class="mt-6 grid grid-cols-1 gap-4">
-          <input type="hidden" name="form-name" value="contact">
-          <p class="hidden"><label>Nechte prázdné: <input name="bot-field"></label></p>
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <input class="rounded-md bg-white border border-slate-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-violet-600" name="name" placeholder="Name" required>
-            <input class="rounded-md bg-white border border-slate-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-violet-600" name="email" placeholder="Email" type="email" required>
-          </div>
-          <input class="rounded-md bg-white border border-slate-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-violet-600" name="company" placeholder="Company (optional)">
-          <textarea class="rounded-md bg-white border border-slate-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-violet-600" name="message" placeholder="What do you need help with?" rows="4" required></textarea>
-          <div data-netlify-recaptcha="true"></div>
-          <button class="rounded-md btn-gradient text-white px-5 py-3 font-medium w-max">Send</button>
-        </form>
-      </div>
-    </div>
-  </section>
-</main>
-
-<footer class="bg-[#0b1120] border-t border-slate-800 text-slate-300">
-  <div class="container mx-auto px-4 lg:px-6 py-10 text-sm">
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-      <div><p class="font-semibold text-white">nxlab.ai</p><p class="mt-2 text-slate-400">AI partner for mid-sized and larger companies.</p></div>
-      <div><p class="font-semibold text-white">Navigation</p>
-        <ul class="mt-2 space-y-1">
-          <li><a href="#what" class="hover:text-white">What we do</a></li>
-          <li><a href="#how" class="hover:text-white">How we work</a></li>
-          <li><a href="#why" class="hover:text-white">Why us</a></li>
-          <li><a href="#contact" class="hover:text-white">Contact</a></li>
-        </ul>
-      </div>
-      <div><p class="font-semibold text-white">Legal</p>
-        <ul class="mt-2 space-y-1">
-          <li><a href="#" class="hover:text-white">Privacy Policy</a></li>
-          <li><a href="#" class="hover:text-white">Terms of Use</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="mt-6 border-t border-slate-800 pt-5 flex items-center justify-between">
-      <p>© 2025 nxlab.ai</p><p class="text-slate-500">EU hosting • NDA • On‑prem na vyžádání</p>
-    </div>
-  </div>
-</footer>
-
-<script>
-document.addEventListener('submit', function(e){
-  var t=e.target;if(!t||!t.getAttribute)return;
-  var n=t.getAttribute('name');
-  if(n==='contact'||n==='contact-en'){ if(window.gtag) gtag('event','contact_submit',{event_category:'form',event_label:n,language:document.documentElement.lang,page_location:location.href}); }
-}, true);
-</script>
-
-</body></html>
+  <!-- JS: fade-in + menu animation -->
+  <script>
+  window.addEventListener("load", () => {
+    document.body.classList.add("loaded");
+  });
+  const toggle = document.getElementById('menu-toggle');
+  const bars = toggle.querySelectorAll('.bar');
+  const menu = document.getElementById('mobile-menu');
+  let open = false;
+  toggle.addEventListener('click', () => {
+    open = !open;
+    if (open) {
+      bars[0].style.transform = 'rotate(45deg)';
+      bars[1].style.opacity = '0';
+      bars[2].style.transform = 'rotate(-45deg)';
+      menu.classList.remove('hidden');
+      setTimeout(() => {
+        menu.style.opacity = '1';
+        menu.style.transform = 'translateY(0)';
+      }, 10);
+    } else {
+      bars[0].style.transform = 'rotate(0deg)';
+      bars[1].style.opacity = '1';
+      bars[2].style.transform = 'rotate(0deg)';
+      menu.style.opacity = '0';
+      menu.style.transform = 'translateY(-12px)';
+      setTimeout(() => menu.classList.add('hidden'), 250);
+    }
+  });
+  </script>
+</body>
+</html>
