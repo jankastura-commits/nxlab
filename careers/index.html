@@ -17,7 +17,7 @@
       --bg:#ffffff;
       --fg:#0a0a0a;
       --muted:#6b7280;
-      --brand:#2563eb; /* blue accent */
+      --brand:#2563eb;
       --card:#f8fafc;
       --border:#e5e7eb;
       --shadow:0 10px 25px rgba(0,0,0,.06);
@@ -35,13 +35,11 @@
     .card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:20px;box-shadow:var(--shadow)}
     .grid{display:grid;gap:18px}
     .grid.two{grid-template-columns:1fr 1fr}
-    .grid.three{grid-template-columns:repeat(3,1fr)}
     .section{padding:24px 0}
     .kicker{font-weight:700;color:#111827;letter-spacing:.02em;font-size:13px;text-transform:uppercase}
     h2{font-size:24px;margin:8px 0 10px}
     ul{margin:10px 0 0 0;padding-left:18px}
     li{margin:6px 0}
-    .cta-wrap{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
     .btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 16px;border-radius:12px;border:1px solid var(--border);font-weight:600}
     .btn-primary{background:var(--brand);border-color:var(--brand);color:#fff}
     .btn-primary:hover{filter:brightness(.96)}
@@ -49,88 +47,29 @@
     .panel{background:#fff;border:1px solid var(--border);border-radius:var(--radius);padding:18px;box-shadow:var(--shadow)}
     .meta{font-size:13px;color:var(--muted)}
     .footer{padding:36px 0;color:var(--muted);font-size:14px}
-    /* Responsive */
+    input,textarea{width:100%;padding:10px;border:1px solid var(--border);border-radius:10px;font-family:inherit}
+    label{font-weight:500;margin-top:8px;display:block}
+    button{cursor:pointer}
     @media (max-width: 920px){
       .hero{grid-template-columns:1fr}
       h1{font-size:34px}
       .grid.two{grid-template-columns:1fr}
-      .grid.three{grid-template-columns:1fr}
     }
   </style>
 </head>
 <body>
- <!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Join NXLab.ai – Developer</title>
-  <meta name="description" content="NXLab.ai is hiring JS/TS developer to build fast AI PoCs and MVPs. Remote with CET overlap.">
-  <meta property="og:title" content="Join NXLab.ai – Developer">
-  <meta property="og:description" content="Build fast AI PoCs/MVPs with ChatGPT & Google Workspace.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://nxlab.ai/careers">
-  <meta name="theme-color" content="#0a0a0a">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <style>
-    :root{
-      --bg:#ffffff;
-      --fg:#0a0a0a;
-      --muted:#6b7280;
-      --brand:#2563eb; /* blue accent */
-      --card:#f8fafc;
-      --border:#e5e7eb;
-      --shadow:0 10px 25px rgba(0,0,0,.06);
-      --radius:18px;
-    }
-    *{box-sizing:border-box}
-    html,body{margin:0;padding:0;background:var(--bg);color:var(--fg);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;line-height:1.6}
-    a{color:var(--brand);text-decoration:none}
-    a:hover{text-decoration:underline}
-    .container{max-width:1100px;margin:0 auto;padding:24px}
-    .hero{display:grid;grid-template-columns:1.2fr .8fr;gap:28px;align-items:center;padding:40px 0}
-    .badge{display:inline-flex;align-items:center;gap:8px;background:#eef2ff;color:#3730a3;border:1px solid #e0e7ff;border-radius:999px;padding:6px 12px;font-weight:600;font-size:12px;letter-spacing:.02em}
-    h1{font-size:40px;line-height:1.15;margin:14px 0 10px}
-    p.lead{font-size:18px;color:var(--muted);margin:0 0 18px}
-    .card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:20px;box-shadow:var(--shadow)}
-    .grid{display:grid;gap:18px}
-    .grid.two{grid-template-columns:1fr 1fr}
-    .grid.three{grid-template-columns:repeat(3,1fr)}
-    .section{padding:24px 0}
-    .kicker{font-weight:700;color:#111827;letter-spacing:.02em;font-size:13px;text-transform:uppercase}
-    h2{font-size:24px;margin:8px 0 10px}
-    ul{margin:10px 0 0 0;padding-left:18px}
-    li{margin:6px 0}
-    .cta-wrap{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
-    .btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 16px;border-radius:12px;border:1px solid var(--border);font-weight:600}
-    .btn-primary{background:var(--brand);border-color:var(--brand);color:#fff}
-    .btn-primary:hover{filter:brightness(.96)}
-    .btn-ghost{background:#fff}
-    .panel{background:#fff;border:1px solid var(--border);border-radius:var(--radius);padding:18px;box-shadow:var(--shadow)}
-    .meta{font-size:13px;color:var(--muted)}
-    .footer{padding:36px 0;color:var(--muted);font-size:14px}
-    /* Responsive */
-    @media (max-width: 920px){
-      .hero{grid-template-columns:1fr}
-      h1{font-size:34px}
-      .grid.two{grid-template-columns:1fr}
-      .grid.three{grid-template-columns:1fr}
-    }
-  </style>
-</head>
-<body>
+
   <header class="container">
     <div class="hero">
       <div>
         <span class="badge">We’re hiring</span>
         <h1>Join NXLab.ai – JS/TS Developer</h1>
-        <p class="lead">Build small AI prototypes (PoCs) and micro‑MVPs with ChatGPT & Google Workspace. Remote‑friendly with CET overlap.</p>
-        <div class="cta-wrap">
+        <p class="lead">Build small AI prototypes (PoCs) and micro-MVPs with ChatGPT & Google Workspace. Remote-friendly with CET overlap.</p>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:18px">
           <a class="btn btn-primary" href="#apply">Apply now</a>
           <a class="btn btn-ghost" href="#trial">See trial project</a>
         </div>
-        <p class="meta" style="margin-top:10px">Contract/part‑time → potential full‑time · Remote (EU) · 3–4 h/day CET overlap</p>
+        <p class="meta" style="margin-top:10px">Contract/part-time → potential full-time · Remote (EU) · 3–4 h/day CET overlap</p>
       </div>
       <div class="card">
         <div class="kicker">Quick summary</div>
@@ -145,6 +84,7 @@
   </header>
 
   <main class="container">
+
     <section class="section grid two">
       <div class="panel">
         <div class="kicker">What you’ll do</div>
@@ -153,7 +93,7 @@
           <li>Build small web apps and automations (Netlify + serverless / Apps Script).</li>
           <li>Integrate ChatGPT, Google Workspace, basic REST APIs.</li>
           <li>Design clean interfaces (request/response) to swap mock → real data.</li>
-          <li>Keep PoCs GDPR‑friendly (secrets, logs, PII masking).</li>
+          <li>Keep PoCs GDPR-friendly (secrets, logs, PII masking).</li>
         </ul>
       </div>
       <div class="panel">
@@ -171,12 +111,12 @@
     <section id="trial" class="section">
       <div class="panel">
         <div class="kicker">Trial project</div>
-        <h2>Micro‑PoC: Company lookup by IČO (mock data)</h2>
-        <p>Deliver a white‑themed static page with an input for IČO and result cards showing: company name, IČO, incorporation date, executives (acts jointly/individually), owners with % shares. Use mock JSON now; design your API interface so we can swap to real registries later. Deploy on Netlify and include a short README.</p>
+        <h2>Micro-PoC: Company lookup by IČO (mock data)</h2>
+        <p>Deliver a white-themed static page with an input for IČO and result cards showing: company name, IČO, incorporation date, executives (acts jointly/individually), owners with % shares. Use mock JSON now; design your API interface so we can swap to real registries later. Deploy on Netlify and include a short README.</p>
         <ul>
-          <li><strong>Time‑box:</strong> 3–6 hours, fixed price.</li>
-          <li><strong>Docs:</strong> 1‑page English brief (scope, assumptions, API design, security notes, next steps).</li>
-          <li><strong>Evaluation:</strong> docs clarity · UX/readability · technical cleanliness · time‑boxing & trade‑offs.</li>
+          <li><strong>Time-box:</strong> 3–6 hours, fixed price.</li>
+          <li><strong>Docs:</strong> 1-page English brief (scope, assumptions, API design, security notes, next steps).</li>
+          <li><strong>Evaluation:</strong> docs clarity · UX/readability · technical cleanliness · time-boxing & trade-offs.</li>
         </ul>
       </div>
     </section>
@@ -185,30 +125,54 @@
       <div class="panel">
         <div class="kicker">Apply now</div>
         <h2>Short application form</h2>
-        <p>Please submit the form below. We’ll get back to you quickly if there’s a match.</p>
-        <div class="card" style="padding:0;overflow:hidden;border-radius:14px">
-          <!-- Replace FORM_URL with your live Google Form URL -->
-          <iframe
-            src="FORM_URL"
-            style="border:0;width:100%;height:640px"
-            loading="lazy"
-            title="NXLab.ai application form"
-            referrerpolicy="no-referrer-when-downgrade"
-            allow="clipboard-write *; web-share *">
-          </iframe>
-        </div>
-        <p class="meta" style="margin-top:10px">Don’t have a Google Form yet? Replace <code>FORM_URL</code> in the HTML with the public form link (File → Share → Anyone with the link).</p>
+        <p>Please fill out the form below. We’ll get back to you if there’s a match.</p>
+
+        <form name="developer-apply" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thanks" style="margin-top:1rem">
+          <input type="hidden" name="form-name" value="developer-apply">
+          <p class="hidden"><label>Don’t fill this out: <input name="bot-field"></label></p>
+
+          <label>Full name
+            <input name="name" required>
+          </label>
+
+          <label>Email / LinkedIn / GitHub
+            <input name="contact" required>
+          </label>
+
+          <label>Short intro
+            <textarea name="intro" rows="3" required></textarea>
+          </label>
+
+          <label>Example of something you’ve built (link or description)
+            <textarea name="example" rows="2"></textarea>
+          </label>
+
+          <label>Tech skills
+            <input name="skills" placeholder="e.g. JS, TS, Python, Apps Script">
+          </label>
+
+          <label>Availability
+            <input name="availability" placeholder="e.g. 10–20 h/week, start May 2025">
+          </label>
+
+          <div data-netlify-recaptcha="true" style="margin-top:1rem"></div>
+          <button type="submit"
+            style="margin-top:1rem;background:#2563eb;color:white;padding:12px 20px;border:none;border-radius:8px;cursor:pointer;font-weight:600">
+            Send application
+          </button>
+        </form>
+
       </div>
       <div class="panel">
         <div class="kicker">How we work</div>
         <ul>
-          <li>All docs & issues in English (short 1‑pagers, PR descriptions).</li>
-          <li>2× weekly calls (stand‑up + demo).</li>
+          <li>All docs & issues in English (short 1-pagers, PR descriptions).</li>
+          <li>2× weekly calls (stand-up + demo).</li>
           <li>Pair programming 30–45 min weekly when helpful.</li>
           <li>Start 10–20 h/week; expand if cadence works.</li>
         </ul>
         <div class="card">
-          <div class="kicker">Nice‑to‑have</div>
+          <div class="kicker">Nice-to-have</div>
           <ul style="margin-top:6px">
             <li>Apps Script & Sheets automations</li>
             <li>Make/Zapier workflows</li>
@@ -221,11 +185,8 @@
   </main>
 
   <footer class="container footer">
-    <div class="grid two">
-      <div>© <span id="year"></span> NXLab.ai — Building intelligent prototypes faster.</div>
-    </div>
+    <div>© <span id="year"></span> NXLab.ai — Building intelligent prototypes faster.</div>
   </footer>
-
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
