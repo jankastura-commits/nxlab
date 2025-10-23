@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://nxlab.ai/sitemap.xml

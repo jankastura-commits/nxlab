@@ -1,232 +1,142 @@
-<!doctype html>
-<html lang="cs">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+<!doctype html><html lang="cs"><head>
   <title>nxlab.ai — Partner pro smysluplné využití AI</title>
-  <meta name="description" content="Pomáháme firmám využít AI s rozumem. Konzultace, návrh a implementace praktických řešení. Bez hype, s důrazem na bezpečnost a důvěru.">
-  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+  <meta name="description" content="Pomáháme firmám využít AI s rozumem — od nápadu po implementaci. Bez hype, s důrazem na bezpečnost, důvěru a měřitelný přínos.">
+  <link rel="canonical" href="https://nxlab.ai/">
+  <link rel="alternate" hreflang="cs" href="https://nxlab.ai/">
+  <link rel="alternate" hreflang="en" href="https://nxlab.ai/en/">
+
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="alternate icon" type="image/png" href="/favicon.png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <meta name="theme-color" content="#3b82f6">
+  <meta name="google-site-verification" content="uNaiPwfM7RikBORzVRVhXYO3bZKcSi1xgKTt8BAIGy8">
+  <meta name="msvalidate.01" content="6275B635CA12AAF68A4B833702931556">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-2L5NXT75WG"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-2L5NXT75WG');</script>
   <script src="https://cdn.tailwindcss.com"></script>
-  <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
-  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
-  <script crossorigin src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
   <style>
-    html { scroll-behavior: smooth; }
-    .fade-top { background: linear-gradient(180deg, rgba(248,250,252,0.7) 0%, rgba(255,255,255,0) 100%); }
+    html{scroll-behavior:smooth}
+    .container{max-width:1200px}
+    .hero-bg{position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1960&auto=format&fit=crop') center/cover no-repeat;z-index:0}
+    .hero-overlay{position:absolute;inset:0;background:radial-gradient(85% 65% at 18% 12%, rgba(30,58,138,.55) 0%, rgba(49,46,129,.78) 45%, rgba(15,23,42,.88) 100%), linear-gradient(180deg, rgba(15,23,42,.75) 0%, rgba(15,23,42,.9) 100%);z-index:0}
+    .hero-anim{position:absolute;inset:0;z-index:1;pointer-events:none;opacity:.55;mix-blend:screen;background-image:repeating-linear-gradient(115deg,rgba(37,99,235,.22) 0px,rgba(37,99,235,.22) 2px,transparent 2px,transparent 120px),repeating-linear-gradient(65deg,rgba(99,102,241,.18) 0px,rgba(99,102,241,.18) 1px,transparent 1px,transparent 140px);background-size:900px 900px,1100px 1100px;background-position:0 0,0 0;animation:lines 18s linear infinite}
+    @keyframes lines{to{background-position:900px 0,-1100px 0}}
+    .btn-gradient{background-image:linear-gradient(135deg,#1e40af,#3b82f6)}
+    .btn-gradient:hover{filter:brightness(1.06)}
+    p{line-height:1.4;margin-bottom:1.1rem}
   </style>
 </head>
 <body class="bg-white text-slate-900 antialiased">
-  <!-- Hidden static form for Netlify detection (important when using React) -->
-  <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thanks" hidden>
-    <input type="text" name="name" />
-    <input type="email" name="email" />
-    <textarea name="message"></textarea>
-  </form>
+<header class="sticky top-0 z-40 w-full bg-white/95 backdrop-blur border-b border-slate-200"><div class="container mx-auto px-4 lg:px-6 h-16 flex items-center justify-between">
+  <a href="/" class="flex items-baseline gap-1 font-extrabold tracking-tight text-[22px]"><span class="text-slate-900">nxlab</span><span class="text-blue-500">.</span><span class="text-blue-500">ai</span></a>
+  <nav class="hidden md:flex items-center gap-6 text-[14px] text-slate-700">
+    <a href="#what" class="hover:text-slate-900">Co umíme</a>
+    <a href="#how" class="hover:text-slate-900">Jak pracujeme</a>
+    <a href="#why" class="hover:text-slate-900">Proč my</a>
+    <a href="#contact" class="rounded-md btn-gradient text-white px-4 py-2">Kontakt</a>
+    <a href="/en/" class="text-slate-600 hover:text-slate-900" hreflang="en" aria-label="English version">EN</a>
+  </nav></div></header>
 
-  <div id="root"></div>
+<section class="relative"><div class="hero-bg"></div><div class="hero-overlay"></div><div class="hero-anim"></div>
+  <div class="relative z-10 container mx-auto px-4 lg:px-6 py-12 lg:py-16 flex flex-col items-start justify-center min-h-[52vh]">
+    <div class="max-w-3xl text-white">
+      <h1 class="text-4xl lg:text-5xl font-extrabold leading-tight">Pomáháme firmám využít AI s rozumem.</h1>
+      <p class="mt-3 text-lg text-slate-200">Najdeme konkrétní místa, kde AI šetří čas a zvyšuje kvalitu práce. Bez žargonu, s respektem k vašemu brandu a datům.</p>
+      <div class="mt-4 flex flex-wrap gap-3"><a href="#contact" class="rounded-md btn-gradient text-white px-5 py-3 font-medium">Domluvit úvodní schůzku</a></div>
+      <p class="mt-3 text-sm text-slate-300">NDA samozřejmostí • Data zůstávají vaše • Možné on‑prem</p>
+    </div>
+  </div>
+</section>
 
-  <script type="text/babel">
-    const { useState } = React;
+<main>
+  <section id="what" class="bg-white">
+    <div class="container mx-auto px-4 lg:px-6 py-14 lg:py-18">
+      <h2 class="text-2xl lg:text-3xl font-bold text-slate-900">Co umíme</h2>
+      <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="max-w-[34ch]"><h3 class="text-[17px] font-semibold">Z dokumentů děláme přehledy</h3><p class="mt-0 text-slate-600">Souhrny a doporučení z manuálů, smluv a podkladů.</p></div>
+        <div class="max-w-[34ch]"><h3 class="text-[17px] font-semibold">Ze schůzek děláme zápisy a úkoly</h3><p class="mt-0 text-slate-600">Přepis, shrnutí a akční body do e‑mailu nebo CRM.</p></div>
+        <div class="max-w-[34ch]"><h3 class="text-[17px] font-semibold">Z procesů děláme automatizaci</h3><p class="mt-0 text-slate-600">Propojení na vaše nástroje, méně ruční práce.</p></div>
+        <div class="max-w-[34ch]"><h3 class="text-[17px] font-semibold">Z knowledge base děláme odpovědi</h3><p class="mt-0 text-slate-600">Jasná odpověď s odkazem na zdroj; interně i pro zákazníky.</p></div>
+      </div>
+    </div>
+  </section>
 
-    function Header() {
-      const [open, setOpen] = useState(false);
-      return (
-        <header className="sticky top-0 z-40 w-full bg-white/70 backdrop-blur border-b border-slate-200/60">
-          <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-            <a href="#" className="flex items-baseline gap-1 font-extrabold tracking-tight text-2xl">
-              <span>nxlab</span><span className="text-slate-400">.</span><span className="text-blue-600">ai</span>
-            </a>
-            <nav className="hidden md:flex items-center gap-8 text-sm">
-              <a href="#what" className="hover:text-blue-600">Co děláme</a>
-              <a href="#how" className="hover:text-blue-600">Jak pomáháme</a>
-              <a href="#why" className="hover:text-blue-600">Proč my</a>
-              <a href="#security" className="hover:text-blue-600">Bezpečnost</a>
-              <a href="#contact" className="rounded-xl bg-blue-600 text-white px-4 py-2 hover:bg-blue-700">Domluvit call</a>
-            </nav>
-            <button onClick={()=>setOpen(!open)} className="md:hidden p-2 rounded-lg border border-slate-200">
-              <span className="sr-only">Menu</span>☰
-            </button>
+  <section id="how" class="bg-slate-50">
+    <div class="container mx-auto px-4 lg:px-6 py-14 lg:py-18">
+      <h2 class="text-2xl lg:text-3xl font-bold text-slate-900">Jak pracujeme</h2>
+      <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="max-w-[34ch]"><p class="text-[12px] uppercase tracking-wider text-slate-500">Krok 1</p><p class="mt-2 font-semibold">Konzultace</p><p class="mt-0 text-slate-600">Krátce poznáme váš kontext, cíle a kde to dnes bolí.</p></div>
+        <div class="max-w-[34ch]"><p class="text-[12px] uppercase tracking-wider text-slate-500">Krok 2</p><p class="mt-2 font-semibold">Návrh a mini‑prototyp</p><p class="mt-0 text-slate-600">Navrhneme postup a na vzorku ukážeme, jak by to fungovalo.</p></div>
+        <div class="max-w-[34ch]"><p class="text-[12px] uppercase tracking-wider text-slate-500">Krok 3</p><p class="mt-2 font-semibold">Implementace</p><p class="mt-0 text-slate-600">Nasadíme řešení, napojíme na nástroje a zaškolíme tým.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="why" class="bg-white">
+    <div class="container mx-auto px-4 lg:px-6 py-14 lg:py-18">
+      <h2 class="text-2xl lg:text-3xl font-bold text-slate-900">Proč my</h2>
+      <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="max-w-[34ch]"><p class="font-semibold">Lidsky a s respektem k brandu</p><p class="mt-0 text-slate-600">Jasný jazyk, čisté výstupy, důraz na uživatelský dojem.</p></div>
+        <div class="max-w-[34ch]"><p class="font-semibold">Důvěra a diskrétnost</p><p class="mt-0 text-slate-600">NDA, auditovatelnost, přístupy jen pro autorizované osoby.</p></div>
+        <div class="max-w-[34ch]"><p class="font-semibold">Od návrhu po dodání</p><p class="mt-0 text-slate-600">Co navrhneme, to sami postavíme a pomůžeme nasadit.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="bg-slate-50">
+    <div class="container mx-auto px-4 lg:px-6 py-14 lg:py-18">
+      <h2 class="text-2xl lg:text-3xl font-bold">Kontakt</h2>
+      <div class="max-w-2xl">
+        <p class="mt-2 text-slate-600">Napište pár vět o vašem cíli a domluvme si krátký call.</p>
+        <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thanks" class="mt-6 grid grid-cols-1 gap-4">
+          <input type="hidden" name="form-name" value="contact">
+          <p class="hidden"><label>Nechte prázdné: <input name="bot-field"></label></p>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <input class="rounded-md bg-white border border-slate-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-violet-600" name="name" placeholder="Jméno" required>
+            <input class="rounded-md bg-white border border-slate-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-violet-600" name="email" placeholder="E‑mail" type="email" required>
           </div>
-          {open && (
-            <div className="md:hidden border-t border-slate-200 px-4 pt-2 pb-4 space-y-2 bg-white">
-              {["what","how","why","security","contact"].map(id => (
-                <a key={id} href={"#"+id} className="block py-2" onClick={()=>setOpen(false)}>
-                  {id==="what"?"Co děláme": id==="how"?"Jak pomáháme": id==="why"?"Proč my": id==="security"?"Bezpečnost":"Kontakt"}
-                </a>
-              ))}
-            </div>
-          )}
-        </header>
-      );
-    }
+          <input class="rounded-md bg-white border border-slate-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-violet-600" name="company" placeholder="Společnost (volitelné)">
+          <textarea class="rounded-md bg-white border border-slate-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-violet-600" name="message" placeholder="S čím chcete pomoct?" rows="4" required></textarea>
+          <div data-netlify-recaptcha="true"></div>
+          <button class="rounded-md btn-gradient text-white px-5 py-3 font-medium w-max">Odeslat</button>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
 
-    function Hero() {
-      return (
-        <section className="relative">
-          <div className="pointer-events-none absolute inset-0 fade-top"></div>
-          <div className="relative mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
-            <div className="max-w-3xl">
-              <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight leading-tight">Pomáháme firmám využít AI s rozumem.</h1>
-              <p className="mt-4 text-lg text-slate-600">Najdeme konkrétní místa, kde AI šetří čas a zvyšuje kvalitu práce. Bez žargonu, s respektem k vašemu brandu a datům.</p>
-              <div className="mt-6 flex flex-wrap gap-3">
-                <a href="#contact" className="rounded-2xl bg-blue-600 text-white px-5 py-3 font-medium hover:bg-blue-700">Domluvme si krátký call</a>
-                <a href="#what" className="rounded-2xl border border-slate-300 px-5 py-3 font-medium hover:border-slate-400">Zjistit více</a>
-              </div>
-              <div className="mt-5 text-sm text-slate-500">
-                <span className="inline-block mr-4">NDA samozřejmostí</span>
-                <span className="inline-block mr-4">Data zůstávají vaše</span>
-                <span className="inline-block">Možné on‑prem</span>
-              </div>
-            </div>
-          </div>
-        </section>
-      );
-    }
+<footer class="bg-[#0b1120] border-t border-slate-800 text-slate-300">
+  <div class="container mx-auto px-4 lg:px-6 py-10 text-sm">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div><p class="font-semibold text-white">nxlab.ai</p><p class="mt-2 text-slate-400">AI partner pro střední a větší firmy.</p></div>
+      <div><p class="font-semibold text-white">Navigace</p>
+        <ul class="mt-2 space-y-1">
+          <li><a href="#what" class="hover:text-white">Co umíme</a></li>
+          <li><a href="#how" class="hover:text-white">Jak pracujeme</a></li>
+          <li><a href="#why" class="hover:text-white">Proč my</a></li>
+          <li><a href="#contact" class="hover:text-white">Kontakt</a></li>
+        </ul>
+      </div>
+      <div><p class="font-semibold text-white">Právní</p>
+        <ul class="mt-2 space-y-1">
+          <li><a href="#" class="hover:text-white">Zásady ochrany osobních údajů</a></li>
+          <li><a href="#" class="hover:text-white">Podmínky použití</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="mt-6 border-t border-slate-800 pt-5 flex items-center justify-between">
+      <p>© 2025 nxlab.ai</p><p class="text-slate-500">EU hosting • NDA • On‑prem na vyžádání</p>
+    </div>
+  </div>
+</footer>
 
-    function WhatWeDo() {
-      const items = [
-        {title:"Z dokumentů děláme přehledy", desc:"Souhrny a doporučení z manuálů, smluv a podkladů."},
-        {title:"Ze schůzek děláme zápisy a úkoly", desc:"Přepis, shrnutí a akční body do e‑mailu nebo CRM."},
-        {title:"Z procesů děláme automatizaci", desc:"Propojení na vaše nástroje, méně ruční práce."},
-        {title:"Z knowledge base děláme odpovědi", desc:"Jasná odpověď s odkazem na zdroj; interně i pro zákazníky."},
-      ];
-      return (
-        <section id="what" className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
-          <h2 className="text-2xl sm:text-3xl font-bold">Co děláme</h2>
-          <p className="mt-1.5 text-slate-600 max-w-3xl">Praktické věci, které lidem hned pomohou. Přizpůsobené vašemu jazyku, procesu a brandu.</p>
-          <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
-            {items.map(i => (
-              <div key={i.title} className="rounded-3xl bg-slate-50 p-8 hover:bg-slate-100 transition">
-                <h3 className="text-lg font-semibold">{i.title}</h3>
-                <p className="mt-2 text-slate-600">{i.desc}</p>
-              </div>
-            ))}
-          </div>
-        </section>
-      );
-    }
+<script>
+document.addEventListener('submit', function(e){
+  var t=e.target;if(!t||!t.getAttribute)return;
+  var n=t.getAttribute('name');
+  if(n==='contact'||n==='contact-en'){ if(window.gtag) gtag('event','contact_submit',{event_category:'form',event_label:n,language:document.documentElement.lang,page_location:location.href}); }
+}, true);
+</script>
 
-    function HowWeHelp() {
-      const steps = [
-        {t:"Konzultace", d:"Krátce poznáme váš kontext, cíle a kde to dnes bolí."},
-        {t:"Návrh a mini‑prototyp", d:"Navrhneme postup a na vzorku ukážeme, jak by to fungovalo."},
-        {t:"Implementace", d:"Nasadíme řešení, napojíme na nástroje a zaškolíme tým."},
-      ];
-      return (
-        <section id="how" className="bg-white">
-          <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
-            <h2 className="text-2xl sm:text-3xl font-bold">Jak pomáháme</h2>
-            <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
-              {steps.map(s => (
-                <div key={s.t} className="rounded-3xl bg-slate-50 p-8 hover:bg-slate-100 transition">
-                  <p className="font-semibold">{s.t}</p>
-                  <p className="mt-2 text-slate-600">{s.d}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-      );
-    }
-
-    function WhyUs() {
-      const reasons = [
-        {t:"Lidsky a s respektem k brandu", d:"Jasný jazyk, čisté výstupy, důraz na uživatelský dojem."},
-        {t:"Důvěra a diskrétnost", d:"NDA, auditovatelnost, přístupy jen pro autorizované osoby."},
-        {t:"Od návrhu po dodání", d:"Co navrhneme, to sami postavíme a pomůžeme nasadit."},
-      ];
-      return (
-        <section id="why" className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
-          <h2 className="text-2xl sm:text-3xl font-bold">Proč my</h2>
-          <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
-            {reasons.map(r => (
-              <div key={r.t} className="rounded-3xl bg-slate-50 p-8 hover:bg-slate-100 transition">
-                <p className="font-semibold">{r.t}</p>
-                <p className="mt-2 text-slate-600">{r.d}</p>
-              </div>
-            ))}
-          </div>
-        </section>
-      );
-    }
-
-    function Security() {
-      return (
-        <section id="security" className="bg-white">
-          <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
-            <h2 className="text-2xl sm:text-3xl font-bold">Bezpečnost a provoz</h2>
-            <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6">
-              {[
-                {t:"Provoz pod kontrolou", d:"EU cloud nebo vaše prostředí (on‑prem). Data zůstávají vaše."},
-                {t:"Soulad a governance", d:"Respektujeme interní směrnice a požadavky na audit."},
-                {t:"Integrace", d:"Napojení na vaše nástroje (Google/Microsoft 365, CRM, intranet)."},
-              ].map(x => (
-                <div key={x.t} className="rounded-3xl bg-slate-50 p-8 hover:bg-slate-100 transition">
-                  <p className="font-semibold">{x.t}</p>
-                  <p className="mt-2 text-slate-600">{x.d}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-      );
-    }
-
-    function Contact() {
-      return (
-        <section id="contact" className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
-          <div className="max-w-2xl">
-            <h2 className="text-2xl sm:text-3xl font-bold">Zajímá vás, kde má AI smysl?</h2>
-            <p className="mt-1.5 text-slate-600">Napište pár vět o vašem cíli a domluvme si krátký call.</p>
-            <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thanks" className="mt-6 grid grid-cols-1 gap-4">
-              <input type="hidden" name="form-name" value="contact" />
-              <p className="hidden">
-                <label>Nechte prázdné: <input name="bot-field" /></label>
-              </p>
-              <input className="rounded-2xl bg-slate-50 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-600" name="name" placeholder="Jméno" required />
-              <input className="rounded-2xl bg-slate-50 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-600" name="email" placeholder="E‑mail" type="email" required />
-              <textarea className="rounded-2xl bg-slate-50 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-600" name="message" placeholder="S čím chcete pomoct?" rows="4" required></textarea>
-              <div data-netlify-recaptcha="true"></div>
-              <button className="rounded-2xl bg-blue-600 text-white px-5 py-3 font-medium hover:bg-blue-700 w-max">Odeslat</button>
-            </form>
-
-          </div>
-        </section>
-      );
-    }
-
-    function Footer() {
-      return (
-        <footer className="border-t border-slate-200">
-          <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-8 text-sm text-slate-500 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-            <p>© 2025 nxlab.ai — AI laboratoř</p>
-            <nav className="flex gap-4">
-              <a href="#what" className="hover:text-slate-700">Co děláme</a>
-              <a href="#how" className="hover:text-slate-700">Jak pomáháme</a>
-              <a href="#contact" className="hover:text-slate-700">Kontakt</a>
-            </nav>
-          </div>
-        </footer>
-      );
-    }
-
-    function App() {
-      return (
-        <div className="min-h-screen w-full bg-white text-slate-900">
-          <Header />
-          <Hero />
-          <WhatWeDo />
-          <HowWeHelp />
-          <WhyUs />
-          <Security />
-          <Contact />
-          <Footer />
-        </div>
-      );
-    }
-
-    const root = ReactDOM.createRoot(document.getElementById('root'));
-    root.render(<App />);
-  </script>
-</body>
-</html>
+</body></html>
