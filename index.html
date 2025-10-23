@@ -1,10 +1,11 @@
-<!doctype html><html lang="cs"><head>
+<!doctype html>
+<html lang="cs">
+<head>
   <title>nxlab.ai — Partner pro smysluplné využití AI</title>
   <meta name="description" content="Pomáháme firmám využít AI s rozumem — od nápadu po implementaci. Bez hype, s důrazem na bezpečnost, důvěru a měřitelný přínos.">
   <link rel="canonical" href="https://nxlab.ai/">
   <link rel="alternate" hreflang="cs" href="https://nxlab.ai/">
   <link rel="alternate" hreflang="en" href="https://nxlab.ai/en/">
-
   <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="alternate icon" type="image/png" href="/favicon.png">
@@ -17,6 +18,27 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     html{scroll-behavior:smooth}
+    body {
+      opacity: 0;
+      transform: translateY(10px);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+    body.loaded {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    section {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    #menu-toggle .bar {
+      transition: transform 0.3s ease, opacity 0.2s ease;
+    }
     .container{max-width:1200px}
     .hero-bg{position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1960&auto=format&fit=crop') center/cover no-repeat;z-index:0}
     .hero-overlay{position:absolute;inset:0;background:radial-gradient(85% 65% at 18% 12%, rgba(30,58,138,.55) 0%, rgba(49,46,129,.78) 45%, rgba(15,23,42,.88) 100%), linear-gradient(180deg, rgba(15,23,42,.75) 0%, rgba(15,23,42,.9) 100%);z-index:0}
@@ -27,123 +49,43 @@
     p{line-height:1.4;margin-bottom:1.1rem}
   </style>
 </head>
-<body class="bg-white text-slate-900 antialiased">
 
-  <header class="sticky top-0 z-40 w-full bg-white/95 backdrop-blur border-b border-slate-200"><div class="container mx-auto px-4 lg:px-6 h-16 flex items-center justify-between">
-  <a href="/" class="flex items-baseline gap-1 font-extrabold tracking-tight text-[22px]"><span class="text-slate-900">nxlab</span><span class="text-blue-500">.</span><span class="text-blue-500">ai</span></a>
- <nav class="hidden md:flex items-center gap-6 text-[14px] text-slate-700">
-  <a href="#what" class="hover:text-slate-900">Co umíme</a>
-  <a href="#how" class="hover:text-slate-900">Jak pracujeme</a>
-  <a href="#why" class="hover:text-slate-900">Proč my</a>
+<body class="bg-white text-slate-900 antialiased font-[Inter]">
 
-  <!-- nový odkaz -->
-  <a href="/careers/" class="hover:text-slate-900 font-medium">Kariéra</a>
-  <!-- nebo anglická varianta: -->
-  <!-- <a href="/careers/" class="hover:text-slate-900 font-medium">Join us</a> -->
+  <!-- HEADER -->
+  <header class="sticky top-0 z-40 w-full bg-white/95 backdrop-blur border-b border-slate-200">
+    <div class="container mx-auto px-4 lg:px-6 h-16 flex items-center justify-between">
+      <a href="/" class="flex items-baseline gap-1 font-extrabold tracking-tight text-[22px]">
+        <span class="text-slate-900">nxlab</span><span class="text-blue-500">.</span><span class="text-blue-500">ai</span>
+      </a>
 
-  <a href="#contact" class="rounded-md btn-gradient text-white px-4 py-2">Kontakt</a>
-  <a href="/en/" class="text-slate-600 hover:text-slate-900" hreflang="en" aria-label="English version">EN</a>
-</nav></div></header>
+      <!-- DESKTOP MENU -->
+      <nav class="hidden md:flex items-center gap-6 text-[14px] text-slate-700">
+        <a href="#what" class="hover:text-slate-900">Co umíme</a>
+        <a href="#how" class="hover:text-slate-900">Jak pracujeme</a>
+        <a href="#why" class="hover:text-slate-900">Proč my</a>
+        <a href="/careers/" class="hover:text-slate-900 font-medium">Kariéra</a>
+        <a href="#contact" class="rounded-md btn-gradient text-white px-4 py-2">Kontakt</a>
+        <a href="/en/" class="text-slate-600 hover:text-slate-900" hreflang="en" aria-label="English version">EN</a>
+      </nav>
 
-<section class="relative"><div class="hero-bg"></div><div class="hero-overlay"></div><div class="hero-anim"></div>
-  <div class="relative z-10 container mx-auto px-4 lg:px-6 py-12 lg:py-16 flex flex-col items-start justify-center min-h-[52vh]">
-    <div class="max-w-3xl text-white">
-      <h1 class="text-4xl lg:text-5xl font-extrabold leading-tight">Pomáháme firmám využít AI s rozumem.</h1>
-      <p class="mt-3 text-lg text-slate-200">Najdeme konkrétní místa, kde AI šetří čas a zvyšuje kvalitu práce. Bez žargonu, s respektem k vašemu brandu a datům.</p>
-      <div class="mt-4 flex flex-wrap gap-3"><a href="#contact" class="rounded-md btn-gradient text-white px-5 py-3 font-medium">Domluvit úvodní schůzku</a></div>
-      <p class="mt-3 text-sm text-slate-300">NDA samozřejmostí • Data zůstávají vaše • Možné on‑prem</p>
+      <!-- MOBILE MENU BUTTON -->
+      <button id="menu-toggle" class="md:hidden flex flex-col justify-center w-8 h-8 relative focus:outline-none group" aria-label="Menu">
+        <span class="bar absolute w-6 h-[2px] bg-slate-800 rounded transition-all duration-300 origin-center"></span>
+        <span class="bar absolute w-6 h-[2px] bg-slate-800 rounded transition-all duration-300 origin-center translate-y-[8px]"></span>
+        <span class="bar absolute w-6 h-[2px] bg-slate-800 rounded transition-all duration-300 origin-center -translate-y-[8px]"></span>
+      </button>
     </div>
-  </div>
-</section>
 
-<main>
-  <section id="what" class="bg-white">
-    <div class="container mx-auto px-4 lg:px-6 py-14 lg:py-18">
-      <h2 class="text-2xl lg:text-3xl font-bold text-slate-900">Co umíme</h2>
-      <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div class="max-w-[34ch]"><h3 class="text-[17px] font-semibold">Z dokumentů děláme přehledy</h3><p class="mt-0 text-slate-600">Souhrny a doporučení z manuálů, smluv a podkladů.</p></div>
-        <div class="max-w-[34ch]"><h3 class="text-[17px] font-semibold">Ze schůzek děláme zápisy a úkoly</h3><p class="mt-0 text-slate-600">Přepis, shrnutí a akční body do e‑mailu nebo CRM.</p></div>
-        <div class="max-w-[34ch]"><h3 class="text-[17px] font-semibold">Z procesů děláme automatizaci</h3><p class="mt-0 text-slate-600">Propojení na vaše nástroje, méně ruční práce.</p></div>
-        <div class="max-w-[34ch]"><h3 class="text-[17px] font-semibold">Z knowledge base děláme odpovědi</h3><p class="mt-0 text-slate-600">Jasná odpověď s odkazem na zdroj; interně i pro zákazníky.</p></div>
-      </div>
+    <!-- MOBILE MENU -->
+    <div id="mobile-menu" class="md:hidden hidden flex-col bg-white border-t border-slate-100 shadow-md text-[15px] text-slate-700 opacity-0 transition-opacity duration-300">
+      <a href="#what" class="px-5 py-3 hover:bg-slate-50 transition-colors">Co umíme</a>
+      <a href="#how" class="px-5 py-3 hover:bg-slate-50 transition-colors">Jak pracujeme</a>
+      <a href="#why" class="px-5 py-3 hover:bg-slate-50 transition-colors">Proč my</a>
+      <a href="/careers/" class="px-5 py-3 hover:bg-slate-50 font-medium transition-colors">Kariéra</a>
+      <a href="#contact" class="block text-center text-white bg-gradient-to-r from-indigo-500 to-blue-500 rounded-md mx-4 my-3 py-2 font-medium shadow hover:opacity-95 transition-all">Kontakt</a>
+      <a href="/en/" class="px-5 py-3 text-slate-600 hover:bg-slate-50" hreflang="en">EN</a>
     </div>
-  </section>
+  </header>
 
-  <section id="how" class="bg-slate-50">
-    <div class="container mx-auto px-4 lg:px-6 py-14 lg:py-18">
-      <h2 class="text-2xl lg:text-3xl font-bold text-slate-900">Jak pracujeme</h2>
-      <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div class="max-w-[34ch]"><p class="text-[12px] uppercase tracking-wider text-slate-500">Krok 1</p><p class="mt-2 font-semibold">Konzultace</p><p class="mt-0 text-slate-600">Krátce poznáme váš kontext, cíle a kde to dnes bolí.</p></div>
-        <div class="max-w-[34ch]"><p class="text-[12px] uppercase tracking-wider text-slate-500">Krok 2</p><p class="mt-2 font-semibold">Návrh a mini‑prototyp</p><p class="mt-0 text-slate-600">Navrhneme postup a na vzorku ukážeme, jak by to fungovalo.</p></div>
-        <div class="max-w-[34ch]"><p class="text-[12px] uppercase tracking-wider text-slate-500">Krok 3</p><p class="mt-2 font-semibold">Implementace</p><p class="mt-0 text-slate-600">Nasadíme řešení, napojíme na nástroje a zaškolíme tým.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <section id="why" class="bg-white">
-    <div class="container mx-auto px-4 lg:px-6 py-14 lg:py-18">
-      <h2 class="text-2xl lg:text-3xl font-bold text-slate-900">Proč my</h2>
-      <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div class="max-w-[34ch]"><p class="font-semibold">Lidsky a s respektem k brandu</p><p class="mt-0 text-slate-600">Jasný jazyk, čisté výstupy, důraz na uživatelský dojem.</p></div>
-        <div class="max-w-[34ch]"><p class="font-semibold">Důvěra a diskrétnost</p><p class="mt-0 text-slate-600">NDA, auditovatelnost, přístupy jen pro autorizované osoby.</p></div>
-        <div class="max-w-[34ch]"><p class="font-semibold">Od návrhu po dodání</p><p class="mt-0 text-slate-600">Co navrhneme, to sami postavíme a pomůžeme nasadit.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <section id="contact" class="bg-slate-50">
-    <div class="container mx-auto px-4 lg:px-6 py-14 lg:py-18">
-      <h2 class="text-2xl lg:text-3xl font-bold">Kontakt</h2>
-      <div class="max-w-2xl">
-        <p class="mt-2 text-slate-600">Napište pár vět o vašem cíli a domluvme si krátký call.</p>
-        <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thanks" class="mt-6 grid grid-cols-1 gap-4">
-          <input type="hidden" name="form-name" value="contact">
-          <p class="hidden"><label>Nechte prázdné: <input name="bot-field"></label></p>
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <input class="rounded-md bg-white border border-slate-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-violet-600" name="name" placeholder="Jméno" required>
-            <input class="rounded-md bg-white border border-slate-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-violet-600" name="email" placeholder="E‑mail" type="email" required>
-          </div>
-          <input class="rounded-md bg-white border border-slate-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-violet-600" name="company" placeholder="Společnost (volitelné)">
-          <textarea class="rounded-md bg-white border border-slate-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-violet-600" name="message" placeholder="S čím chcete pomoct?" rows="4" required></textarea>
-          <div data-netlify-recaptcha="true"></div>
-          <button class="rounded-md btn-gradient text-white px-5 py-3 font-medium w-max">Odeslat</button>
-        </form>
-      </div>
-    </div>
-  </section>
-</main>
-
-<footer class="bg-[#0b1120] border-t border-slate-800 text-slate-300">
-  <div class="container mx-auto px-4 lg:px-6 py-10 text-sm">
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-      <div><p class="font-semibold text-white">nxlab.ai</p><p class="mt-2 text-slate-400">AI partner pro střední a větší firmy.</p></div>
-      <div><p class="font-semibold text-white">Navigace</p>
-        <ul class="mt-2 space-y-1">
-          <li><a href="#what" class="hover:text-white">Co umíme</a></li>
-          <li><a href="#how" class="hover:text-white">Jak pracujeme</a></li>
-          <li><a href="#why" class="hover:text-white">Proč my</a></li>
-          <li><a href="#contact" class="hover:text-white">Kontakt</a></li>
-        </ul>
-      </div>
-      <div><p class="font-semibold text-white">Právní</p>
-        <ul class="mt-2 space-y-1">
-          <li><a href="#" class="hover:text-white">Zásady ochrany osobních údajů</a></li>
-          <li><a href="#" class="hover:text-white">Podmínky použití</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="mt-6 border-t border-slate-800 pt-5 flex items-center justify-between">
-      <p>© 2025 nxlab.ai</p><p class="text-slate-500">EU hosting • NDA • On‑prem na vyžádání</p>
-    </div>
-  </div>
-</footer>
-
-<script>
-document.addEventListener('submit', function(e){
-  var t=e.target;if(!t||!t.getAttribute)return;
-  var n=t.getAttribute('name');
-  if(n==='contact'||n==='contact-en'){ if(window.gtag) gtag('event','contact_submit',{event_category:'form',event_label:n,language:document.documentElement.lang,page_location:location.href}); }
-}, true);
-</script>
-
-</body></html>
+  <!-- HERO -->
