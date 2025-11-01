@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://nxlab.ai/</loc></url>
-  <url><loc>https://nxlab.ai/thanks.html</loc></url>
+  <url><loc>https://nxlab.ai/alfred/</loc></url>
+  <url><loc>https://nxlab.ai/smartlawyer/</loc></url>
+  <url><loc>https://nxlab.ai/thanks/</loc></url>
   <url><loc>https://nxlab.ai/en/</loc></url>
-  <url><loc>https://nxlab.ai/en/thanks.html</loc></url>
+  <url><loc>https://nxlab.ai/en/alfred/</loc></url>
+  <url><loc>https://nxlab.ai/en/smartlawyer/</loc></url>
+  <url><loc>https://nxlab.ai/en/thanks/</loc></url>
 </urlset>
