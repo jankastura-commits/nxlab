@@ -1,0 +1,90 @@
+<!doctype html><html lang="cs"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SmartLawyer — AI pro advokáty a firemní právníky | NXLab.ai</title><meta name="description" content="SmartLawyer zrychluje rešerše, kontrolu a tvorbu právních dokumentů.">
+<link rel="canonical" href="https://nxlab.ai/smartlawyer/">
+<link rel="alternate" hreflang="cs" href="https://nxlab.ai/smartlawyer/">
+<link rel="alternate" hreflang="en" href="https://nxlab.ai/en/smartlawyer/">
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-2L5NXT75WG"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-2L5NXT75WG');</script>
+<script src="https://cdn.tailwindcss.com"></script><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>.btn-gradient{background-image:linear-gradient(135deg,#1e40af,#3b82f6)}</style></head>
+<body class="bg-white text-slate-900 antialiased font-[Inter]">
+<header class="sticky top-0 z-40 w-full bg-white/95 border-b border-slate-200">
+  <div class="container mx-auto px-4 lg:px-6 h-16 flex items-center justify-between">
+    <a href="/" class="flex items-baseline gap-1 font-extrabold tracking-tight text-[22px]">
+      <span class="text-slate-900">nxlab</span><span class="text-blue-500">.</span><span class="text-blue-500">ai</span>
+    </a>
+    <nav class="hidden md:flex items-center gap-6 text-[14px] text-slate-700 relative">
+      <a href="/#what">Co umíme</a>
+      <a href="/#services">Služby</a>
+      <a href="/#how">Jak pracujeme</a>
+      <a href="/#why">Proč my</a>
+      <div class="nav-projects relative inline-block">
+        <button class="inline-flex items-center gap-1">Projekty</button>
+        <div class="nav-projects-menu hidden absolute left-0 mt-2 w-44 bg-white shadow-lg border border-slate-200 rounded-md z-50">
+          <a href="/alfred/" class="block px-4 py-2 text-slate-700 hover:bg-slate-50">Alfred</a>
+          <a href="/smartlawyer/" class="block px-4 py-2 text-slate-700 hover:bg-slate-50">SmartLawyer</a>
+        </div>
+      </div>
+      <a href="/#contact" class="rounded-md btn-gradient text-white px-4 py-2">Kontakt</a>
+      <a href="/en/smartlawyer/" class="text-slate-600 hover:text-slate-900" hreflang="en">EN</a>
+    </nav>
+  </div>
+</header>
+<section class="relative bg-slate-900">
+  <div class="absolute inset-0 opacity-70" style="background:radial-gradient(75% 60% at 20% 15%,rgba(37,99,235,.55)0%,rgba(79,70,229,.7)45%,rgba(15,23,42,.9)100%)"></div>
+  <div class="relative container mx-auto px-4 lg:px-6 py-16">
+    <div class="max-w-3xl text-white">
+      <h1 class="text-4xl lg:text-5xl font-extrabold leading-tight">SmartLawyer — AI pro právníky</h1>
+      <p class="mt-3 text-lg text-slate-200">Chat nad vlastními daty, generování dokumentů, auditní log.</p>
+    </div>
+  </div>
+</section>
+<section id="contact" class="bg-slate-50"><div class="container mx-auto px-4 lg:px-6 py-14">
+  <h2 class="text-2xl lg:text-3xl font-bold">Zajímá vás víc?</h2>
+  <form name="smartlawyer-contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thanks/"
+    class="mt-6 grid gap-4 max-w-2xl">
+    <input type="hidden" name="form-name" value="smartlawyer-contact">
+    <p class="hidden"><label>Nechte prázdné: <input name="bot-field"></label></p>
+    <div class="grid md:grid-cols-2 gap-4">
+      <input class="rounded-md border border-slate-300 px-4 py-3 focus:ring-2 focus:ring-violet-600" name="name" placeholder="Jméno" required>
+      <input class="rounded-md border border-slate-300 px-4 py-3 focus:ring-2 focus:ring-violet-600" name="email" placeholder="Email" type="email" required>
+    </div>
+    <textarea class="rounded-md border border-slate-300 px-4 py-3 focus:ring-2 focus:ring-violet-600" name="message" placeholder="Váš dotaz" rows="4"></textarea>
+    <button class="rounded-md btn-gradient text-white px-5 py-3 font-medium w-max">Odeslat</button>
+  </form>
+</div></section>
+<footer class="bg-[#0b1120] border-t border-slate-800 text-slate-300"><div class="container mx-auto px-4 lg:px-6 py-10 text-sm">
+  <div class="grid md:grid-cols-3 gap-8">
+    <div><p class="font-semibold text-white">nxlab.ai</p></div>
+    <div><p class="font-semibold text-white">Navigace</p>
+      <ul class="mt-2 space-y-1"><li><a href="/#what" class="hover:text-white">Co umíme</a></li>
+      <li><a href="/#services" class="hover:text-white">Služby</a></li>
+      <li><a href="/#contact" class="hover:text-white">Kontakt</a></li></ul></div>
+  </div>
+  <div class="mt-6 border-t border-slate-800 pt-5 flex items-center justify-between"><p>© 2025 nxlab.ai</p></div>
+</div></footer>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.nav-projects').forEach(group => {
+      const dropdown = group.querySelector('.nav-projects-menu');
+      if (!dropdown) return;
+      let timeout;
+      const show = () => { clearTimeout(timeout); dropdown.classList.remove('hidden'); };
+      const hide = () => { timeout = setTimeout(() => dropdown.classList.add('hidden'), 150); };
+      group.addEventListener('mouseenter', show);
+      group.addEventListener('mouseleave', hide);
+      const btn = group.querySelector('button, a');
+      if (btn) {
+        btn.addEventListener('click', (e) => {
+          e.preventDefault();
+          if (dropdown.classList.contains('hidden')) show(); else hide();
+        });
+      }
+    });
+  });
+</script>
+
+</body></html>
