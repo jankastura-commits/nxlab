@@ -23,14 +23,14 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <style>
-    html {scroll-behavior:smooth}
-    .container {max-width:1200px}
-    .hero-bg {position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1960&auto=format&fit=crop') center/cover no-repeat;z-index:0}
-    .hero-overlay {position:absolute;inset:0;background:radial-gradient(85% 65% at 18% 12%,rgba(30,58,138,.55)0%,rgba(49,46,129,.78)45%,rgba(15,23,42,.88)100%),linear-gradient(180deg,rgba(15,23,42,.75)0%,rgba(15,23,42,.9)100%);z-index:0}
-    .hero-anim {position:absolute;inset:0;z-index:1;pointer-events:none;opacity:.55;mix-blend:screen;background-image:repeating-linear-gradient(115deg,rgba(37,99,235,.22)0,rgba(37,99,235,.22)2px,transparent 2px,transparent 120px),repeating-linear-gradient(65deg,rgba(99,102,241,.18)0,rgba(99,102,241,.18)1px,transparent 1px,transparent 140px);background-size:900px 900px,1100px 1100px;background-position:0 0,0 0;animation:lines 18s linear infinite}
+    html{scroll-behavior:smooth}
+    .container{max-width:1200px}
+    .hero-bg{position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1960&auto=format&fit=crop') center/cover no-repeat;z-index:0}
+    .hero-overlay{position:absolute;inset:0;background:radial-gradient(85% 65% at 18% 12%,rgba(30,58,138,.55)0%,rgba(49,46,129,.78)45%,rgba(15,23,42,.88)100%),linear-gradient(180deg,rgba(15,23,42,.75)0%,rgba(15,23,42,.9)100%);z-index:0}
+    .hero-anim{position:absolute;inset:0;z-index:1;pointer-events:none;opacity:.55;mix-blend:screen;background-image:repeating-linear-gradient(115deg,rgba(37,99,235,.22)0,rgba(37,99,235,.22)2px,transparent 2px,transparent 120px),repeating-linear-gradient(65deg,rgba(99,102,241,.18)0,rgba(99,102,241,.18)1px,transparent 1px,transparent 140px);background-size:900px 900px,1100px 1100px;background-position:0 0,0 0;animation:lines 18s linear infinite}
     @keyframes lines{to{background-position:900px 0,-1100px 0}}
-    .btn-gradient {background-image:linear-gradient(135deg,#1e40af,#3b82f6)}
-    .btn-gradient:hover {filter:brightness(1.06)}
+    .btn-gradient{background-image:linear-gradient(135deg,#1e40af,#3b82f6)}
+    .btn-gradient:hover{filter:brightness(1.06)}
   </style>
 </head>
 
@@ -60,7 +60,6 @@
       <a href="/en/" class="text-slate-600 hover:text-slate-900" hreflang="en">EN</a>
     </nav>
 
-    <!-- mobile toggle -->
     <button id="menu-toggle" class="md:hidden flex flex-col justify-center w-8 h-8 relative focus:outline-none group" aria-label="Menu">
       <span class="absolute w-6 h-[2px] bg-slate-800 rounded transition-all duration-300 origin-center"></span>
       <span class="absolute w-6 h-[2px] bg-slate-800 rounded transition-all duration-300 origin-center translate-y-[8px]"></span>
@@ -68,7 +67,6 @@
     </button>
   </div>
 
-  <!-- mobile menu -->
   <div id="mobile-menu"
     class="md:hidden hidden flex-col bg-white/98 backdrop-blur border-t border-slate-200 shadow-lg text-[16px] text-slate-800 opacity-0 -translate-y-3 transition-all duration-300 rounded-b-2xl">
     <a href="#what" class="block px-6 py-3 border-b border-slate-100 hover:bg-slate-50">Co děláme</a>
@@ -82,9 +80,8 @@
   </div>
 </header>
 
-<!-- hero -->
 <section class="relative">
-  <div class="hero-bg"></div><div class="hero-overlay"></div><div class="hero-anim"></></div>
+  <div class="hero-bg"></div><div class="hero-overlay"></div><div class="hero-anim"></div>
   <div class="relative z-10 container mx-auto px-4 lg:px-6 py-12 lg:py-16 flex flex-col items-start justify-center min-h-[52vh]">
     <div class="max-w-3xl text-white">
       <h1 class="text-4xl lg:text-5xl font-extrabold leading-tight">Pomáháme firmám používat AI s rozumem.</h1>
@@ -95,7 +92,6 @@
   </div>
 </section>
 
-<!-- main sections -->
 <main>
   <section id="what" class="bg-white">
     <div class="container mx-auto px-4 lg:px-6 py-14">
@@ -177,7 +173,6 @@
           </div>
           <input class="rounded-md border border-slate-300 px-4 py-3 focus:ring-2 focus:ring-violet-600" name="company" placeholder="Firma (nepovinné)">
           <textarea class="rounded-md border border-slate-300 px-4 py-3 focus:ring-2 focus:ring-violet-600" name="message" placeholder="S čím můžeme pomoci?" rows="4" required></textarea>
-          
           <button class="rounded-md btn-gradient text-white px-5 py-3 font-medium w-max">Odeslat</button>
         </form>
       </div>
@@ -210,15 +205,42 @@
 </footer>
 
 <script>
-const toggle=document.getElementById("menu-toggle");
-const menu=document.getElementById("mobile-menu");
-let open=false;
-toggle.addEventListener("click",()=>{open=!open;
-  if(open){menu.classList.remove("hidden");setTimeout(()=>{menu.style.opacity="1";menu.style.transform="translateY(0)"},10);}
-  else{menu.style.opacity="0";menu.style.transform="translateY(-12px)";setTimeout(()=>menu.classList.add("hidden"),250);}
+const toggle = document.getElementById("menu-toggle");
+const menu = document.getElementById("mobile-menu");
+let open = false;
+
+// mobilní menu
+toggle.addEventListener("click", () => {
+  open = !open;
+  if (open) {
+    menu.classList.remove("hidden");
+    setTimeout(() => {
+      menu.style.opacity = "1";
+      menu.style.transform = "translateY(0)";
+    }, 10);
+  } else {
+    menu.style.opacity = "0";
+    menu.style.transform = "translateY(-12px)";
+    setTimeout(() => menu.classList.add("hidden"), 250);
+  }
 });
-document.querySelector(".nav-projects").addEventListener("mouseenter",()=>{document.querySelector(".nav-projects-menu").classList.remove("hidden")});
-document.querySelector(".nav-projects").addEventListener("mouseleave",()=>{document.querySelector(".nav-projects-menu").classList.add("hidden")});
+
+// dropdown Projekty
+const projects = document.querySelector(".nav-projects");
+const dropdown = document.querySelector(".nav-projects-menu");
+let hideTimeout;
+
+projects.addEventListener("mouseenter", () => {
+  clearTimeout(hideTimeout);
+  dropdown.classList.remove("hidden");
+});
+
+projects.addEventListener("mouseleave", () => {
+  hideTimeout = setTimeout(() => {
+    dropdown.classList.add("hidden");
+  }, 200);
+});
 </script>
+
 </body>
 </html>
